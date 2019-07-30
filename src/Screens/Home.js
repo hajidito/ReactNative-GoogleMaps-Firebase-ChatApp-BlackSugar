@@ -7,6 +7,7 @@ import {
   Text,
   View,
   StatusBar,
+  Alert, BackHandler
 } from 'react-native';
 import User from './User'
 import firebase from 'firebase'
@@ -50,9 +51,9 @@ export default class App extends Component {
       })
   }
 
-  _refreshGPS() {
-    this.setState({ users: null })
+  _refreshGPS =()=> {
     this.setState({
+      users: [],
       region: {
         latitude: 37.78825,
         longitude: -122.4324,
@@ -75,7 +76,7 @@ export default class App extends Component {
         User.info = person.info
         User.status = person.status
         this.setState({ avatar: person.avatar })
-      } else {
+      } else if (person.userId !== 'null'){
         this.setState((prevState) => {
           return {
             users: [...prevState.users, person]
@@ -120,15 +121,35 @@ export default class App extends Component {
 
   }
 
+  componentWillUnmount() {
+    BackHandler.removeEventListener('hardwareBackPress', this.onBackPress);
+  }
+
+  onBackPress = () => {
+ 
+    Alert.alert(
+      ' Options ',
+      'Do you want to exit From Black Sugar ?',
+      [
+        { text: 'Yes', onPress: () => BackHandler.exitApp() },
+        { text: 'No', onPress: () => console.log('NO Pressed') }
+      ],
+      { cancelable: false },
+    );
+ 
+    return true;
+  }
+
   componentWillMount = async () => {
 
     await firebase.database().ref('users/' + User.id)
       .update({
         status: 'online'
       })
-
+    
+    BackHandler.addEventListener('hardwareBackPress', this.onBackPress);
     this.props.navigation.setParams({ refreshGPS: this._refreshGPS })
-
+      
     navigator.geolocation.getCurrentPosition(
       (position) => {
         let updates = {};
@@ -165,7 +186,7 @@ export default class App extends Component {
         User.info = person.info
         User.status = person.status
         this.setState({ avatar: person.avatar })
-      } else {
+      } else if (person.userId !== 'null'){
         this.setState((prevState) => {
           return {
             users: [...prevState.users, person]
@@ -211,7 +232,7 @@ export default class App extends Component {
         </TouchableOpacity>
       ),
       headerRight: (
-        <TouchableOpacity onPress={() => navigation.getParam('refreshGPS')}>
+        <TouchableOpacity onPress={navigation.getParam('refreshGPS')}>
           <Icon ion-icon name="ios-pin" style={{ color: 'white', marginRight: 10 }} />
         </TouchableOpacity>
       )
@@ -286,7 +307,7 @@ export default class App extends Component {
               <View style={{ width: 200 }}>
                 <Callout tooltip={false} onPress={() => this.props.navigation.navigate('Profil', item)} >
                   <Text style={{ padding: 5, borderRadius: 20, borderWidth: 1, borderColor: 'white', textAlign: 'center', backgroundColor: 'grey', fontSize: 12, fontWeight: 'bold', color: 'white' }}>{item.name}</Text>
-                  <Text style={{ textAlign: 'center', color: 'grey', fontWeight: 'bold' }}>tap for detail and chat</Text>
+                  <Text style={{ textAlign: 'center', color: 'grey', fontSize:10}}>tap for detail and chat...</Text>
                 </Callout>
               </View>
             </MapView.Marker>

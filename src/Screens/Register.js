@@ -84,16 +84,16 @@ export default class Login extends Component {
     if (this.state.name == null) {
       alert('name cannot null')
     }
-    if (this.state.email == null) {
+    else if (this.state.email == null) {
       alert('email cannot null')
     }
-    if (this.state.phone == null) {
+    else if (this.state.phone == null) {
       alert('phone cannot null')
     }
-    if (this.state.password == null) {
+    else if (this.state.password == null) {
       alert('password cannot null')
     }
-    if (this.state.birthday == null) {
+    else if (this.state.birthday == null) {
       alert('birthday cannot null')
     }
     else {
@@ -106,7 +106,7 @@ export default class Login extends Component {
           await AsyncStorage.setItem('userAvatar', User.avatar)
           await AsyncStorage.setItem('userPassword', this.state.password)
           let userf = firebase.auth().currentUser;
-          userf.updateProfile({ displayName: this.state.name, photoURL: this.state.avatar })
+          userf.updateProfile({ displayName: this.state.name, photoURL: this.state.avatar ? this.state.avatar : 'https://i.pinimg.com/originals/c3/02/68/c3026833776069a6f9f49540595c3eb5.png' })
           firebase.database().ref('users/' + response.user.uid).set({
             name: this.state.name,
             email: this.state.email,

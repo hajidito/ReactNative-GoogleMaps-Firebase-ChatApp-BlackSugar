@@ -85,10 +85,10 @@ export default class Login extends Component {
     if (this.state.name == null) {
       alert('name cannot null')
     }
-    if (this.state.phone == null) {
+    else if (this.state.phone == null) {
       alert('phone cannot null')
     }
-    if (this.state.avatar == null) {
+    else if (this.state.avatar == null) {
       alert('avatar cannot null')
     }
     else {
@@ -133,11 +133,10 @@ export default class Login extends Component {
     });
   }
   static navigationOptions = ({ navigation }) => ({
-    headerTitle: 'Registration',
+    headerTitle: 'Edit Profile',
     headerTintColor: 'white',
-    header: null,
     headerTitleStyle: {
-      width: '85%',
+      width: '70%',
       textAlign: 'center',
       color: 'white'
     },
