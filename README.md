@@ -55,3 +55,36 @@ After you follow the instructions above, now you can go ahead to the last step, 
 3. Then, type `react-native link` to link all dependencies in this project
 4. And then type `react-native run-android` to run the project in your phone or emulator, the first be sure you connecting your Android Phone or Emulator with enabling USB Debugging.
 5. Enjoy the app! If you have a question feel free to send me email : [hajidito.kerja@gmail.com](mailto:hajidito.kerja@gmail.com)
+
+## Screenshot from the app
+<p align='center'>
+  <span>
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-145521.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124048.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124106.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-145951.jpg' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124639.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124647.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124655.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124704.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124712.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-124743.png' width=200 />
+  <img src='https://github.com/hajidito/ReactNative-GoogleMaps-Firebase-ChatApp-BlackSugar/blob/master/Screenshot_20190730-125032.png' width=200 />
+  </span>
+</p>
+
+## Video Demo App
+
+[![DEMO APP](https://img.youtube.com/vi/DVjXG4Vvz_M/0.jpg)](https://youtu.be/DVjXG4Vvz_M)
+
+<hr>
+
+<h3 align="center">Author</h3>
+
+<p align="center">
+<a href="https://github.com/hajidito">
+  <img alt="Author Andre Feri" title="git author" src="https://avatars3.githubusercontent.com/u/50772146?s=460&v=4" width="250" />
+</a>
+<p align="center"><b><a href="https://github.com/hajidito">Haji Dito M A</a></b></p>
+</p>
+
