@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://cdn-images-1.medium.com/max/2400/1*iTAHnz8gq1UkwTa_1sGYdw.png" height=300 />
-  <img src="https://www.shalomdch.org/wp-content/uploads/sites/2/2018/06/kisspng-google-maps-google-i-o-logo-map-icon-5ac3f9993f68e5.5833410615227928572597.jpg" height=300 />
+  <img src="http://pluspng.com/img-png/google-maps-png-google-maps-icon-1600.png" height=300 />
 </p>
 
 <br>
