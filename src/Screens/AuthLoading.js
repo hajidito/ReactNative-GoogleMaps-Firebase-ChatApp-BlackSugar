@@ -17,13 +17,13 @@ export default class AuthLoading extends React.Component {
   componentDidMount() {
     if (!firebase.apps.length) {
     firebase.initializeApp({
-      apiKey: "AIzaSyBMF2Fm_s9yNDoGnb6f0qwe8xiiVh0vfZ0",
-      authDomain: "black-sugar.firebaseapp.com",
-      databaseURL: "https://black-sugar.firebaseio.com",
-      projectId: "black-sugar",
-      storageBucket: "black-sugar.appspot.com",
-      messagingSenderId: "879779790931",
-      appId: "1:879779790931:web:9d6ba30df3570836"
+      apiKey: '<your-api-key>',
+      authDomain: '<your-auth-domain>',
+      databaseURL: 'https://<your-db-url>.firebaseio.com',
+      projectId: '<your-project-id>',
+      storageBucket: '<your-storage-bucket>.appspot.com',
+      messagingSenderId: '<your-sender-id>',
+      appId: '<your-appfirebase-id>'
     });
   }
     this.subs = [
